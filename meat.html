@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food menu:Meat</title>
+    <link rel="stylesheet" href="./style.css">  
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+   <script src="./jquery-3.6.0.js"></script>
+<body>
+    <header class="header-start">
+        <div class="topic-logo"><img src="./images/Meat 2.jpg " alt=""></div>
+        <div class="detail">
+            <h3>Meat</h3>
+            <p><i class="fas fa-user"></i>Shweta</p>
+            <p> 2,July 2021</p>
+            <div class="star-feature">
+                <i class = "fa fa-star" aria-hidden = "true" id = "st1"></i>  
+               <i class = "fa fa-star" aria-hidden = "true" id = "st2"></i>  
+               <i class = "fa fa-star" aria-hidden = "true" id = "st3"></i>  
+               <i class = "fa fa-star" aria-hidden = "true" id = "st4"></i>  
+               <i class = "fa fa-star" aria-hidden = "true" id = "st5"></i>  
+            </div>
+        </div>
+    </header>
+    <div class="text-1">
+        <p>Meat is animal flesh that is eaten as food. Humans have hunted and killed animals for meat since prehistoric times. The advent of civilization allowed the domestication of animals such as chickens, sheep, rabbits, pigs and cattle. This eventually led to their use in meat production on an industrial scale with the aid of slaughterhouses.</p>
+        <p>Meat is mainly composed of water, protein, and fat. It is edible raw, but is normally eaten after it has been cooked and seasoned or processed in a variety of ways. Unprocessed meat will spoil or rot within hours or days as a result of infection with and decomposition by bacteria and fungi.</p>
+        <p>Meat consumption varies worldwide, depending on cultural or religious preferences, as well as economic conditions. Vegetarians and vegans choose not to eat meat because of ethical, economic, environmental, religious or health concerns that are associated with meat production and consumption.</p>
+
+    </div>
+    <div class="img-content">
+        <h3>Economical</h3>
+        <p><img src="./images/Meat 1.jpg" alt="" width="350px" height="350px" >
+            Several economically important traits in meat animals are heritable to some degree (see the adjacent table) and can thus be selected for by animal breeding. In cattle, certain growth features are controlled by recessive genes which have not so far been controlled, complicating breeding.[1]:18 One such trait is dwarfism; another is the doppelender or "double muscling" condition, which causes muscle hypertrophy and thereby increases the animal's commercial value.[1]:18 Genetic analysis continues to reveal the genetic mechanisms that control numerous aspects of the endocrine system and, through it, meat growth and quality.[1]:19
+            Genetic engineering techniques can shorten breeding programs significantly because they allow for the identification and isolation of genes coding for desired traits, and for the reincorporation of these genes into the animal genome.[1]:21 To enable such manipulation, research is ongoing (as of 2006) to map the entire genome of sheep, cattle and pigs.
+    </p> </div>
+    <div class="text-2">
+        <h3>Protien</h3>
+        <p>  Because producing high-quality protein animal feed is expensive (see also Environmental impact below), several techniques are employed or experimented with to ensure maximum utilization of protein. These include the treatment of feed with formalin to protect amino acids during their passage through the rumen, the recycling of manure by feeding it back to cattle mixed with feed concentrates, or the partial conversion of petroleum hydrocarbons to protein through microbial action.</p>
+    </div>
+
+   
+
+    <div class="reviewbutton">
+        <button id="likebtn">
+            <i class="fa fa-thumbs-up "></i>
+        </button>
+        <input type="number" id="input1" value="0">
+
+        <button id="dislikebtn">
+            <i class="fa fa-thumbs-down "></i>
+        </button>
+        <input type="number" id="input2" value="0">
+
+    </div>
+
+    <div class="comment">
+        <h3>Add Comment</h3>
+        Name:<input type="text" id="name"/> <br/>
+        Date:<input type="datetime-local" id="date" /> <br/>
+        Comment:<input type="text" id="comment" height="20px" class="comment-box" placeholder="Type your comment here"/> <br/>
+        <input type="button" id="submit-button" class="btn-primary" value="Comment">
+    </div>
+    <div class="comment-wave">
+        <div class="allcomment"></div>
+    </div>
+
+
+    <footer id="footer">
+        <div class="social-media">
+        <h2 class="last-sentence">share in </h2>
+        <i class="fab fa-linkedin fa-2x"></i>
+        <i class="fab fa-facebook fa-2x"></i>
+        <i class="fab fa-instagram fa-2x"></i>
+      </div>
+        
+  
+      </footer>
+
+      <script type="text/javascript">
+    //   #################### star javascript ###############
+
+        $(document).ready(function() {  
+          $("#st1").hover(function() {  
+              $(".fa-star").css("color", "black");  
+              $("#st1").css("color", "orange");  
+  
+          });  
+          $("#st2").hover(function() {  
+              $(".fa-star").css("color", "black");  
+              $("#st1, #st2").css("color", "orange");  
+  
+          });  
+          $("#st3").hover(function() {  
+              $(".fa-star").css("color", "black")  
+              $("#st1, #st2, #st3").css("color", "orange");  
+  
+          });  
+          $("#st4").hover(function() {  
+              $(".fa-star").css("color", "black");  
+              $("#st1, #st2, #st3, #st4").css("color", "orange");  
+  
+          });  
+          $("#st5").hover(function() {  
+              $(".fa-star").css("color", "black");  
+              $("#st1, #st2, #st3, #st4, #st5").css("color", "orange");  
+  
+          });  
+        });  
+        // like button
+        let likebtn = document.querySelector("#likebtn");
+        let dislikebtn = document.querySelector("#dislikebtn");
+        let  input1 = document.querySelector("#input1");
+        let input2 = document.querySelector("#input2");
+        
+        likebtn.addEventListener("click",()=>{
+            input1.value=parseInt(input1.value)+1;
+            input1.style.color="#092b12";
+        })
+
+        dislikebtn.addEventListener("click",()=>{
+            input2.value=parseInt(input2.value)+1;
+            input2.style.color="#092b12";
+        })
+            // for all comments
+        $(document).ready(function(){
+            $("#submit-button").click(function(){
+                var input1 =$('#name').val();
+                var input2 =$('#date').val();
+                var input3 =$('#comment').val();
+                
+
+                $(".allcomment").append('<hr>'+input1+'<br>'+input2+'<br>'+input3);
+                // ###### for clear things after comment #######
+                $('#name').val(' ');
+                $('#date').val(' ');
+                $('#comment').val(' ');
+
+                $('.comment-wave').slideDown();
+            })
+        })
+
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food menu:Berry</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./jquery-3.6.0.js"></script>
+</head>
+<body>
+    <header class="header-start">
+        <div class="topic-logo"><img src="./images/Berry 1.jpg" alt=""></div>
+        <div class="detail">
+            <h3>Berry</h3>
+            <p><i class="fas fa-user"></i>Barkha</p>
+            <p>  28,January 2021</p>
+            <div class="star-feature">
+                <i class = "fa fa-star" aria-hidden = "true" id = "st1"></i>  
+               <i class = "fa fa-star" aria-hidden = "true" id = "st2"></i>  
+               <i class = "fa fa-star" aria-hidden = "true" id = "st3"></i>  
+               <i class = "fa fa-star" aria-hidden = "true" id = "st4"></i>  
+               <i class = "fa fa-star" aria-hidden = "true" id = "st5"></i>  
+            </div>
+        
+        </div>
+    </header>
+    <div class="text-1">
+        <p>A berry is a small, pulpy, and often edible fruit. Typically, berries are juicy, rounded, brightly colored, sweet, sour or tart, and do not have a stone or pit, although many pips or seeds may be present.[1] Common examples are strawberries, raspberries, blueberries, blackberries, red currants, white currants and blackcurrants.[2] In Britain, soft fruit is a horticultural term for such fruits</p>
+        <p>Berries are eaten worldwide and often used in jams, preserves, cakes, or pies. Some berries are commercially important. The berry industry varies from country to country as do types of berries cultivated or growing in the wild. Some berries such as raspberries and strawberries have been bred for hundreds of years and are distinct from their wild counterparts, while other berries, such as lingonberries and cloudberries, grow almost exclusively in the wild.</p>
+        <p>Berries also began to be cultivated in Europe and other countries. Some species of blackberries and raspberries of the genus Rubus have been cultivated since the 17th century, while smooth-skinned blueberries and cranberries of the genus Vaccinium have been cultivated in the United States for over a century</p>
+
+    </div>
+    <div class="img-content">
+        <h3>Botanical use</h3>
+        <p><img src="./images/Berry 2.jpg" alt="" width="350px" height="350px" >
+            In botanical terminology, a berry is a simple fruit with seeds and pulp produced from the ovary of a single flower. It is fleshy throughout, except for the seeds. It does not have a special "line of weakness" along which it splits to release the seeds when ripe (i.e. it is indehiscent).[15] A berry may develop from an ovary with one or more carpels (the female reproductive structures of a flower). The seeds are usually embedded in the fleshy interior of the ovary, but there are some non-fleshy examples such as peppers, with air rather than pulp around their seeds. The differences between the everyday and botanical uses of "berry" results in three categories: those fruits that are berries under both definitions; those fruits that are botanical berries but not commonly known as berries; and those parts of plants commonly known as berries that are not botanical berries, and may not even be fruits.
+    </p> </div>
+    <div class="text-2">
+        <h3>Beverages</h3>
+        <p>  Berries are often added to water and/or juiced, as in cranberry juice, which accounts for 95% of cranberry crop usage,[53] blueberry juice, raspberry juice, goji berry juice, acai juice, aronia berry juice, and strawberry juice.[54][55] Wine is the principal fermented beverage made from berries (grapes). Fruit wines are commonly made out of other berries. In most cases, sugars must be added to the berry juices in the process of Chaptalization to increase the alcohol content of the wine.</p>
+    </div>
+
+   
+
+    <div class="reviewbutton">
+        <button id="likebtn">
+            <i class="fa fa-thumbs-up "></i>
+        </button>
+        <input type="number" id="input1" value="0">
+
+        <button id="dislikebtn">
+            <i class="fa fa-thumbs-down "></i>
+        </button>
+        <input type="number" id="input2" value="0">
+
+    </div>
+
+    <div class="comment">
+        <h3>Add Comment</h3>
+        Name:<input type="text" id="name"/> <br/>
+        Date:<input type="datetime-local" id="date" /> <br/>
+        Comment:<input type="text" id="comment" height="20px" class="comment-box" placeholder="Type your comment here"/> <br/>
+        <input type="button" id="submit-button" class="btn-primary" value="Comment">
+    </div>
+    <div class="comment-wave">
+        <div class="allcomment"></div>
+    </div>
+    
+    <footer id="footer">
+        <div class="social-media">
+        <h2 class="last-sentence">share in </h2>
+        <i class="fab fa-linkedin fa-2x"></i>
+        <i class="fab fa-facebook fa-2x"></i>
+        <i class="fab fa-instagram fa-2x"></i>
+      </div>
+  
+      </footer>
+      <script type="text/javascript">
+      //   #################### star javascript ###############
+
+      $(document).ready(function() {  
+          $("#st1").hover(function() {  
+              $(".fa-star").css("color", "black");  
+              $("#st1").css("color", "orange");  
+  
+          });  
+          $("#st2").hover(function() {  
+              $(".fa-star").css("color", "black");  
+              $("#st1, #st2").css("color", "orange");  
+  
+          });  
+          $("#st3").hover(function() {  
+              $(".fa-star").css("color", "black")  
+              $("#st1, #st2, #st3").css("color", "orange");  
+  
+          });  
+          $("#st4").hover(function() {  
+              $(".fa-star").css("color", "black");  
+              $("#st1, #st2, #st3, #st4").css("color", "orange");  
+  
+          });  
+          $("#st5").hover(function() {  
+              $(".fa-star").css("color", "black");  
+              $("#st1, #st2, #st3, #st4, #st5").css("color", "orange");  
+  
+          });  
+        });
+
+
+        let likebtn = document.querySelector("#likebtn");
+        let dislikebtn = document.querySelector("#dislikebtn");
+        let  input1 = document.querySelector("#input1");
+        let input2 = document.querySelector("#input2");
+        
+        likebtn.addEventListener("click",()=>{
+            input1.value=parseInt(input1.value)+1;
+            input1.style.color="#092b12";
+        })
+
+        dislikebtn.addEventListener("click",()=>{
+            input2.value=parseInt(input2.value)+1;
+            input2.style.color="#092b12";
+        })
+
+        $(document).ready(function(){
+            $("#submit-button").click(function(){
+                var input1 =$('#name').val();
+                var input2 =$('#date').val();
+                var input3 =$('#comment').val();
+                
+
+                $(".allcomment").append('<hr>'+input1+'<br>'+input2+'<br>'+input3);
+                // ###### for clear things after comment #######
+                $('#name').val(' ');
+                $('#date').val(' ');
+                $('#comment').val(' ');
+
+                $('.comment-wave').slideDown();
+            })
+        })
+    </script>
+</body>
+</html>
